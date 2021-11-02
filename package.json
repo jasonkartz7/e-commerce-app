@@ -1,0 +1,26 @@
+{
+  "type": "module",
+  "name": "e-commerce-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  },
+  "scripts": {
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonkartz7/e-commerce-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasonkartz7/e-commerce-app/issues"
+  },
+  "homepage": "https://github.com/jasonkartz7/e-commerce-app#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
