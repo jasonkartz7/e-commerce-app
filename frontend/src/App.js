@@ -13,6 +13,7 @@ import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 function App() {
 
@@ -44,6 +45,9 @@ function App() {
                   {userInfo.name} <i className="fa fa-caret-down"></i>{' '}
                 </Link>
                 <ul className="dropdown-content">
+                <li>
+                    <Link to="/profile">User Profile</Link>
+                  </li>
                   <li>
                     <Link to="/orderhistory">Order History</Link>
                   </li>
@@ -69,6 +73,7 @@ function App() {
                 <Route path="/placeorder" component={PlaceOrderScreen}></Route>
                 <Route path="/order/:id" component={OrderScreen}></Route>
                 <Route path="/orderhistory" component={OrderHistoryScreen} exact></Route>
+                <Route path="/profile" component={ProfileScreen} exact></Route>
                 <Route path="/" component={HomeScreen} exact></Route>
             </main>
             <footer className="row center">
