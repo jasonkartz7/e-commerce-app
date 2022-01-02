@@ -4,6 +4,7 @@ import { detailsProduct } from '../actions/productActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 
+
 export default function ProductEditScreen(props) {
   const productId = props.match.params.id;
   const [name, setName] = useState('');
@@ -14,7 +15,7 @@ export default function ProductEditScreen(props) {
   const [brand, setBrand] = useState('');
   const [description, setDescription] = useState('');
 
-  const productDetails = useSelector((state) => state.productDetails);
+  const productDetails = useSelector(state => state.productDetails);
   const { loading, error, product } = productDetails;
   const dispatch = useDispatch();
   useEffect(() => {
@@ -27,16 +28,16 @@ export default function ProductEditScreen(props) {
       setCategory(product.category);
       setCountInStock(product.countInStock);
       setBrand(product.brand);
-      setDescription(product.description);
+      setDescription(product.description);  
     }
-  }, [product, dispatch, productId]);
+  }, [productId, product, dispatch]);
   const submitHandler = (e) => {
     e.preventDefault();
-    // TODO: dispatch update product
-  };
+  }
+
   return (
     <div>
-      <form className="form" onSubmit={submitHandler}>
+      <form className="form" onSubmit = {submitHandler}>
         <div>
           <h1>Edit Product {productId}</h1>
         </div>
@@ -128,4 +129,4 @@ export default function ProductEditScreen(props) {
       </form>
     </div>
   );
-} 
+}
