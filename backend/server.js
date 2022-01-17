@@ -11,7 +11,7 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/testing', {
+mongoose.connect(process.env.MONGODB_URL || 'mongodb+srv://jaysonchua:1234@cluster0.i2thx.mongodb.net/test?authSource=admin&replicaSet=atlas-wnnycu-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

@@ -4,6 +4,8 @@ import {Link} from 'react-router-dom';;
 
 export default function Product(props) {
     const { product } = props;
+
+    console.log(product)
     return (
         <div>
             <div key={product._id} className="card">
@@ -22,9 +24,17 @@ export default function Product(props) {
                                 rating = {product.rating}
                                 numReviews={product.numReviews}
                            ></Rating>
-                           <div className="price">
-                               ${product.price}
-                           </div>
+                            <div className="row">
+                                <div className="price">
+                                    ${product.price}
+                                </div>
+                            <div>
+                                <Link to={`/seller/${product.seller.seller._id}`}>
+                                {product.seller.seller.name}
+                                </Link>
+                            </div>
+                            </div>
+
                        </div>
                    </div>
         </div>
