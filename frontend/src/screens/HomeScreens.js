@@ -25,7 +25,6 @@ export default function HomeScreen() {
         dispatch(listProducts({}));
         dispatch(listTopSellers());
     }, [dispatch])
-    console.log(sellers)
 
     return (
         <div>
