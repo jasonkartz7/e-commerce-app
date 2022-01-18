@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';;
 export default function Product(props) {
     const { product } = props;
 
-    console.log(product)
+   
     return (
         <div>
             <div key={product._id} className="card">
