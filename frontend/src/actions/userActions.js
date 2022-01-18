@@ -30,7 +30,7 @@ export const signout = () => (dispatch) => {
     localStorage.removeItem('cartItems');
     localStorage.removeItem('shippingAddress');
     dispatch({ type: USER_SIGNOUT });
-    document.location.location.href = '/signin';
+    document.location.location = '/signin';
 }
 export const register = (name, email, password) => async(dispatch) => {
     dispatch({ type: USER_REGISTER_REQUEST, payload: { email, password } });
